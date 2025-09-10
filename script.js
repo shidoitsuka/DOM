@@ -7,6 +7,7 @@ const logoImage = document.createElement("img");
 const text = document.createElement("h1");
 tagImage.setAttribute("src", "./asset/vibingCat.gif");
 logoImage.setAttribute("src", "./asset/logo.jpg");
+logoImage.style.width = '300px'
 text.innerHTML = 'you just won $500'
 text.style.position = 'absolute'
 tagButton.style.padding = "15px 32px";
