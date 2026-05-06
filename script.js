@@ -6,9 +6,8 @@ const tagImage = document.createElement("img");
 const logoImage = document.createElement("img");
 const text = document.createElement("h1");
 tagImage.setAttribute("src", "./asset/vibingCat.gif");
-logoImage.setAttribute("src", "./asset/logo.jpg");
 logoImage.style.width = '300px'
-text.innerHTML = 'you just won $500 gina!'
+text.innerHTML = 'happy birthday, mi amor!'
 text.style.position = 'absolute'
 tagButton.style.padding = "15px 32px";
 
@@ -32,4 +31,15 @@ tagButton.onclick = () => {
     text.style.color =
       "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
   }, 200);
+  setInterval(() => {
+  const randX = () => Math.random() * (window.innerWidth - 200);
+  const randY = () => Math.random() * (window.innerHeight - 200);
+
+  tagImage.style.position = 'absolute';
+  tagImage.style.left = randX() + 'px';
+  tagImage.style.top = randY() + 'px';
+
+  text.style.left = randX() + 'px';
+  text.style.top = randY() + 'px';
+}, 1000);
 };
